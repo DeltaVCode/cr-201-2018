@@ -42,7 +42,7 @@ As a result of completing Lecture 1 of Code 201, students will be able to:
 
 ## Kickoff!
 
-This is the welcome and introduction to Code Fellows. Students will meet the campus manager and learn about campus operations and policies.
+This is the welcome and introduction to DeltaV Code School. Students will meet the campus manager and learn about campus operations and policies.
 
 [-top-](#top)
 
@@ -50,7 +50,7 @@ This is the welcome and introduction to Code Fellows. Students will meet the cam
 
 ## Academic Overview
 
-The instructor will give an overview of the topics to be covered in this course and how those topics fit into the overall academic program at Code Fellows.
+The instructor will give an overview of the topics to be covered in this course and how those topics fit into the overall academic program at DeltaV Code School.
 
 [-top-](#top)
 
@@ -63,7 +63,7 @@ By doing a few quick tests and exercises, as detailed below, we will ensure that
 - VSCode packages: ensure that the linter is enabled
 - Chrome: how to open the console
 - Git: enter `which git` in the command line to verify installation
-- Directory structure: together we will set up a directory at ~/codefellows/201/ in which you will store your classwork. We will go over directory structure in general and compare it to GUI
+- Directory structure: together we will set up a directory at ~/deltav/201/ in which you will store your classwork. We will go over directory structure in general and compare it to GUI
 - Live-server: this is a package which will refresh the browser every time you save a file. From the command line, type `npm install -g live-server` to install it globally, making it available to all of your projects. Note that the live-server command must only be used when you are in a folder that contains an index.html file. You can verify this using the `ls` command before typing `live-server`.
 
 [-top-](#top)
