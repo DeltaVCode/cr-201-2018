@@ -12,7 +12,7 @@
 - Strive to have your alert for each question utilize the responses to all of the prior questions such that by the fourth question, your response would look something like, "Greetings, *Iggy* from *Ipanema*, I also like to eat *bananas* while on vacation in *Paris*."
 - Be creative and have fun with your questions/responses! They can be whatever you want so long as the input/output requirements are met.
 - In addition, for each response, create a console.log() message that indicates the nature of the question and the user's response, as we did in class.
-- In the HTML portion of the file, place the four questions within a series of <p> tags so that they are listed on the screen.
+- In the HTML portion of the file, place the four questions within a series of `<p>` tags so that they are listed on the screen.
 - If there are any lingering issues with the setup or functionality of your laptop and the software installations, we need to individually address that right away.
 
 # Submitting Your Assignment
