@@ -5,6 +5,7 @@
 
 ## Today's Schedule
 - Announcements
+  - Headshots tomorrow afternoon (Thursday)
 - [Code Review](#codereview) *[30 minutes]*
 - [JS Control Flow](#control) *[45 minutes]*
 - [CSS Box Model](#box) *[30 minutes]*
