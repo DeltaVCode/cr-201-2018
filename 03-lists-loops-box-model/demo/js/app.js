@@ -63,7 +63,7 @@ while (guess !== '2') {
 console.log('while loop exited');
 
 if (guess === null) {
-  alert('wimp');
+  alert('Wimp. My favorite number is 2, obviously.');
 } else {
   console.log('not a wimp');
 
@@ -75,3 +75,29 @@ if (guess === null) {
 
 }
 
+// For loops!
+
+var i = 0;
+while (i < 5) {
+  console.log(i);
+
+  i = i + 1;
+}
+
+for (var j = 0; j < 5; j = j + 1) {
+  console.log(j);
+}
+
+// Arrays!
+var names = ['TRICIA', 'DYLAN', 'ETHAN', 'CRAIG'];
+console.log(names.length);
+var nameGuess = prompt('Name someone in class!');
+var nameGuessTrimmedToUpper = nameGuess.toUpperCase().trim();
+
+if (names.indexOf(nameGuessTrimmedToUpper) >= 0) {
+  alert('Yes! ' + nameGuess + ' is in our class!');
+} else {
+  alert('WRONG');
+}
+
+alert('All class members: ' + names.join(', '));
