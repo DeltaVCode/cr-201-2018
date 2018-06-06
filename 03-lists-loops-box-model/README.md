@@ -14,7 +14,7 @@
 
 As a result of completing Lecture 3 of Code 201, students will:
 
-- Demonstrate understanding of and classify assorted control flow techniques in JavaScript including ‘for’ loops, ‘if’ and if/else’, as well as  ‘while’ and ‘do/while’ structures, as measured by successful completion of the daily code assignment and a quiz administered in Canvas
+- Demonstrate understanding of and classify assorted control flow techniques in JavaScript including `for` loops, `if` and `if/else`, as well as `while` and `do/while` structures, as measured by successful completion of the daily code assignment and a quiz administered in Canvas
 - Demonstrate understanding of and explain what HTML element attributes are and how to use them, as measured by successful completion of the daily code assignment and a quiz administered in Canvas
 - Demonstrate understanding of and illustrate the CSS box model, as measured by successful completion of the daily code assignment and a quiz administered in Canvas
 
@@ -52,19 +52,19 @@ Let's take about 30 minutes to do our first code review session. We're going to 
 - p.150 	Comparison operators: evaluating conditions
 - p.152 	Structuring comparison operators
 - p.156 	Logical operators
-- p.160 	‘If’ statements
-- p.162 	‘If...else’ statements
-- p.164 	‘Switch’ statements
+- p.160 	`if` statements
+- p.162 	`if...else` statements
+- p.164 	`switch` statements
 - p.166 	Type coercion and weak typing
 - p.167 	Truthy & falsy values
 - p.168 	Checking equality & existence
 - p.169 	Short circuit values
 - p.170 	Loops & loop counters
 - p.172 	Looping
-- p.174 	Key loop concepts (‘break’, ‘continue’)
-- p.175 	Using ‘for’ loops
-- p.176 	Using ‘while’ loops
-- p.177 	Using ‘do...while’ loops
+- p.174 	Key loop concepts (`break`, `continue`)
+- p.175 	Using `for` loops
+- p.176 	Using `while` loops
+- p.177 	Using `do...while` loops
 
 [-top-](#top)
 

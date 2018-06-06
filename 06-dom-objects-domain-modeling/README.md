@@ -54,9 +54,9 @@ As a result of completing Lecture 6 of Code 201, students will:
 
 - p.101: Object literal notation
 - p.102: Accessing an object and dot notation
-- p.106: Creating an object: constructor notation (‘this’ is shown but not explained)
+- p.106: Creating an object: constructor notation (`this` is shown but not explained)
 - p.107: Updating an object
-- p.108-112: Creating many objects: constructor notation (‘this’ explained on p.108)
+- p.108-112: Creating many objects: constructor notation (`this` explained on p.108)
 - p.118: Arrays are objects
 - p.119: Arrays of objects & objects in arrays
 - p.120: What are built-in objects?
