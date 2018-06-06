@@ -33,6 +33,13 @@ var guessCount = 1;
 
 while (guess !== '2') {
 
+  if (guess === null) {
+    console.log('Guess is null; breaking');
+
+    // Escape the loop!
+    break;
+  }
+
   var promptWarning = 'Wrong!';
   if (guess > 2) {
     promptWarning = 'Too high!';
@@ -55,8 +62,16 @@ while (guess !== '2') {
 
 console.log('while loop exited');
 
-if (guessCount === 1) {
-  alert('Right on the first try!'); 
+if (guess === null) {
+  alert('wimp');
 } else {
-  alert('It took ' + guessCount + ' guesses to get it right!');
+  console.log('not a wimp');
+
+  if (guessCount === 1) {
+    alert('Right on the first try!'); 
+  } else {
+    alert('It took ' + guessCount + ' guesses to get it right!');
+  }
+
 }
+
