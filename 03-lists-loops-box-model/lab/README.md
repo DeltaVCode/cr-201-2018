@@ -17,7 +17,7 @@ It can be very handy to take notes and sketch things out when you are planning y
 - As a technical portfolio visitor, I want to View Source and see that the correct answers to the seventh question are stored in an array.
 - As a portfolio visitor, I want to be told how many correct answers I got at the end of the game, with a personalized message (e.g. "You got 4 out of 7 questions correct, Bobbi! Better luck next time.").
 
-### Stretch Goal
+### Stretch Goals
 
 - As a prolific numeric guessing game participant, I want to guess a new random number each time I visit the page, so that I can't memorize the correct answer.
 
@@ -28,6 +28,9 @@ It can be very handy to take notes and sketch things out when you are planning y
 - As a developer, I want to create a simple script for my index.html page using JavaScript, so that I can use the browser to send a response to the user.
 - As a developer, I want to use thoughtful and descriptive console.log() throughout my code to help test my work and assist with debugging.
 - As a developer, I want to manage my code through an online version control system, so I have the ability to work with others, manage my revisions, and keep a thorough record of my progress.
+
+### Developer Stretch Goals
+
 - As a developer, I want to make my code more DRY by putting all of the questions, answers, and responses to the first five yes/no questions in my guessing game into arrays (or even one huge multidimensional array), and modifying the game logic such that a `for` loop will control the flow from question to question.
 - Move the guessing game to a separate HTML file, list the questions on the page, and then have the answers fill in on the page after the user provides the answers.
 
