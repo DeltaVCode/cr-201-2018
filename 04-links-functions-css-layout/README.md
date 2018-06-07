@@ -49,6 +49,8 @@ As a result of completing Lecture 4 of Code 201, students will:
 ##### [Centering in CSS](https://css-tricks.com/centering-css-complete-guide/) has some helpful tips for centering content horizontally and vertically.
 ##### [Floats in CSS](https://medium.freecodecamp.org/css-floats-explained-by-riding-an-escalator-57fa55232333) as explained by riding an escalator.
 
+Class Demo: <https://codepen.io/JBertling/pen/zaKXGa>
+
 [-top-](#top)
 
 <a id="js"></a>
@@ -69,6 +71,8 @@ As a result of completing Lecture 4 of Code 201, students will:
 - p.96: Anonymous functions & function expressions
 - p.97: IIFEs
 - p.98: Variable scope
+
+Class Demo: <https://repl.it/@dahlbyk/cr-201-2018-day4-functions>
 
 [-top-](#top)
 
