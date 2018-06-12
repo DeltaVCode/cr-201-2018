@@ -25,3 +25,7 @@ As a result of completing Lecture 7 of Code 201, students will:
 - p.131: Basic table structure
 - p.132: Table headings
 - p.133: Spanning columns & rows
+
+## Class demo
+
+- <https://codepen.io/JBertling/pen/GGmdWY>
