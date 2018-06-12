@@ -45,26 +45,31 @@ console.log(minivan);
 minivan.honk();
 console.log(minivan.yearMakeModel());
 
-var carList = [ car, minivan ];
-console.log(carList);
+function Vehicle(make, model, year) {
+  if (typeof this === 'undefined') { console.error('Vehicle is a constructor! Use new!'); return; }
+  if (arguments.length < 3) { console.error('Make, Model and Year are required!'); }
 
-var emptyObject = {};
-var emptyArray = [];
+  this.make = make;
+  this.model = model;
+  this.year = year;
 
-emptyArray[0] = 'hello';
-emptyArray.isAwesome = true;
+  this.owners = [];
+  this.serviceRecord = [];
 
-console.log(emptyArray.isAwesome);
+  this.honk = function() {
+    console.log(this.yearMakeModel() + ' says honk!');
+  };
 
-// Property get/set by "dot notation"
-emptyObject.name = 'Keith';
+  this.yearMakeModel = function() {
+    return this.year + ' ' + this.make + ' ' + this.model;
+  };
+}
 
-// Property get/set by "bracket notation"
-emptyObject['age'] = 42;
 
-console.log(emptyObject);
-console.log(emptyObject.name);
-console.log(emptyObject['age']);
+var leaf = new Vehicle('Nissan', 'Leaf', 2018);
+console.log(leaf);
+leaf.honk();
+console.log(leaf.yearMakeModel());
 
-var propertyName = 'age';
-console.log(emptyObject[propertyName]);
+// Have to use new!
+// Vehicle('THis', 'won\'t', 'work');
