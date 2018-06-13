@@ -50,7 +50,7 @@
         <table>
           <tr>
             <td><label for="emailInput">Email</label></td>
-            <td><input type="email" id="emailInput" required placeholder="you@example.com" /></td>
+            <td><input type="email" id="emailInput" placeholder="you@example.com" /></td>
           </tr>
           <tr>
             <td>Phone</td>
@@ -75,7 +75,7 @@
           </tr>
           <tr>
             <td>How long have you been a customer?</td>
-            <td><input name="cust-years" type="number" min="5" max="15" step="0.5" placeholder="# of Years" /></td>
+            <td><input name="custYears" type="number" min="5" max="15" step="0.5" placeholder="# of Years" /></td>
           </tr>
           <tr>
            <td></td> 
@@ -87,6 +87,9 @@
         </table>
       </fieldset>
     </form>
+    <ul id="customers">
+    </ul>
     <script src="js/events.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
