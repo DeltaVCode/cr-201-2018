@@ -4,7 +4,25 @@ function Customer(name, address, city, state, custYears) {
   this.city = city;
   this.state = state;
   this.custYears = +custYears; // force to number
+
+  // Add this new customer to the catalog
+  Customer.all.push(this);
+  console.log('all customers', Customer.all);
 }
+
+// Add catalog of all customers
+Customer.all = [];
+Customer.renderAll = function() {
+  // First, empty out the existing customer list
+  var customersUL = document.getElementById('customers');
+  customersUL.innerHTML = '';
+  console.log("Customer list cleared!");
+
+  // Then, render each customer
+  for (var i = 0; i < Customer.all.length; i++) {
+    Customer.all[i].render();
+  }
+};
 
 Customer.prototype.toString = function () {
   return this.name + ' (' + this.custYears + ' years)';
@@ -40,7 +58,7 @@ function handleSubmit(event) {
   var newCustomer = new Customer( name, address, state, city, custYears );
   console.log(newCustomer);
 
-  newCustomer.render();
+  Customer.renderAll();
 }
 
 var form = document.querySelector('form');
