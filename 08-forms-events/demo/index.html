@@ -32,6 +32,61 @@
       </li>
     </ul>
 
+    <form>
+      <fieldset>
+        <label>Name: <input type="text" name="name" autofocus required /></label>
+        <label>Address: <input type="text" name="address" /></label>
+        <label>City: <input name="city" value="Cedar Rapids" /></label>
+        <label>State: 
+          <select name="state">
+            <option>IL</option>
+            <option selected>IA</option>
+            <option>MN</option>
+            <option>NE</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <table>
+          <tr>
+            <td><label for="emailInput">Email</label></td>
+            <td><input type="email" id="emailInput" required placeholder="you@example.com" /></td>
+          </tr>
+          <tr>
+            <td>Phone</td>
+            <td><input type="tel" placeholder="(xxx) xxx-xxxx" /></td>
+          </tr>
+          <tr>
+            <td>May we contact?</td>
+            <td>
+              <label><input type="radio" name="may-contact" /> Yes</label>
+              <label><input type="radio" name="may-contact" /> No</label>
+            </td>
+          </tr>
+          <tr>
+            <td>Subscriptions</td>
+            <td>
+              <ul>
+                <li><label><input type="checkbox" name="general" /> General Info</label></li>
+                <li><label><input type="checkbox" name="summer" /> Summer Programs</label></li>
+                <li><label><input type="checkbox" name="deltav" /> DeltaV Code School</label></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>How long have you been a customer?</td>
+            <td><input name="cust-years" type="number" min="5" max="15" step="0.5" placeholder="# of Years" /></td>
+          </tr>
+          <tr>
+           <td></td> 
+           <td>
+             <input type="submit" value="Save Preferences" />
+             <button>Cancel <strong>Really!</strong></button>
+           </td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
     <script src="js/events.js"></script>
   </body>
 </html>
