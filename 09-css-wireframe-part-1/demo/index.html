@@ -2,65 +2,33 @@
   <head>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/forms.css" />
-  </head>
-  <body>
-    <form>
-      <fieldset>
-        <label><span class="label-width">Name:</span> <input type="text" name="name" autofocus required /></label>
-        <label><span class="label-width">Address:</span> <input type="text" name="address" /></label>
-        <label><span class="label-width">City:</span> <input name="city" value="Cedar Rapids" /></label>
-        <label><span class="label-width">State:</span> 
-          <select name="state">
-            <option>IL</option>
-            <option selected>IA</option>
-            <option>MN</option>
-            <option>NE</option>
-          </select>
-        </label>
-      </fieldset>
-      <fieldset>
-        <table>
-          <tr>
-            <td><label for="emailInput">Email</label></td>
-            <td><input type="email" id="emailInput" placeholder="you@example.com" /></td>
-          </tr>
-          <tr>
-            <td>Phone</td>
-            <td><input type="tel" placeholder="(xxx) xxx-xxxx" /></td>
-          </tr>
-          <tr>
-            <td>May we contact?</td>
-            <td>
-              <label><input type="radio" name="may-contact" /> Yes</label>
-              <label><input type="radio" name="may-contact" /> No</label>
-            </td>
-          </tr>
-          <tr>
-            <td>Subscriptions</td>
-            <td>
-              <ul>
-                <li><label><input type="checkbox" name="general" /> General Info</label></li>
-                <li><label><input type="checkbox" name="summer" /> Summer Programs</label></li>
-                <li><label><input type="checkbox" name="deltav" /> DeltaV Code School</label></li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>How long have you been a customer?</td>
-            <td><input name="custYears" type="number" min="5" max="15" step="0.5" placeholder="# of Years" /></td>
-          </tr>
-          <tr>
-           <td></td> 
-           <td>
-             <input type="submit" value="Save Preferences" />
-             <button>Cancel <strong>Really!</strong></button>
-           </td>
-          </tr>
-        </table>
-      </fieldset>
-    </form>
-    <ul id="customers">
-    </ul>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">  </head>
+  <body class="no-spacing">
+   <header>
+      <a class="logo" href="index.html">Jess</a>
+      <nav>
+        <ul class="no-spacing">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sign-up.html">Sign Up</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <h1>Jess Has Built An Awesome Product</h1>
+      <h2>Sign Up Today, Or Miss Out Forever</h2>
+      <a class="button" href="sign-up.html">Sign Up Now</a>
+      <aside>
+        <img src="http://via.placeholder.com/300" />
+        <a href="#">Advertising Link</a>
+        <img src="http://via.placeholder.com/300" />
+        <a href="#">Advertising Link</a>
+        <img src="http://via.placeholder.com/300" />
+        <a href="#">Advertising Link</a>
+      </aside>
+    </section>
+    <footer>
+      &copy; Jess in DeltaV 2018
+    </footer>
     <script src="js/app.js"></script>
   </body>
 </html>

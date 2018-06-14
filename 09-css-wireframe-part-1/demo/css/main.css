@@ -4,9 +4,104 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Open Sans', arial, helvetica, sans-serif;
 }
 
 .no-spacing {
   margin: 0;
   padding: 0;
+}
+
+header {
+  clear: both;
+  overflow: hidden;
+  padding: 20px 0 0 20px;
+  background-color: rgba(255,255,255,0.5);
+}
+
+header a {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing:1px;
+}
+
+.logo {
+  display: inline-block;
+  margin-top: -10px;
+  font-size: 2em;
+  color: #DB5461;
+}
+
+.text-left {
+  text-align: left;
+}
+nav {
+  margin-top: -20px;
+  float: right;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+li a {
+  padding: 20px;
+  display: block;
+  color: #A898B3;
+}
+
+section {
+  padding-right: 25%;
+  padding-bottom:100px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #666;
+}
+
+h1 {
+  margin-top: 100px;
+  font-size: 2em;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  text-shadow: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: #A898B3;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+img{
+  max-width: 100%;
+}
+
+aside {
+  position: absolute;
+  right: 0;
+  top: 80px;
+  bottom: 80px;
+  width: 20%;
+  padding: 20px;
+  border-left: solid 5px rgba(255,255,255,0.3);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  text-align: center;
+  color: #ccc;
+  background: #36393B;
 }
