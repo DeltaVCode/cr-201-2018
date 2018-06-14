@@ -5,7 +5,8 @@
 
 ## Today's Schedule
 - Announcements
-  - Reminder: weekly surveys will go out to students today
+  - Building cards + tour today at 1pm
+  - Reminder: weekly surveys in Canvas today
   - Project Week starts a week from today! Let's look over some samples of projects from recent offerings of this class.
 - Code Review *[90 minutes]*
 - [Go over the assigned readings](#readings) *[60 minutes]*

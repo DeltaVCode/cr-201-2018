@@ -5,6 +5,7 @@
 
 ## Today's Schedule
 - Announcements
+  - Building cards + tour tomorrow (Friday) at 1pm
   - It's not to soon to start thinking about final projects. Let's have a conversation about that, because soon you're going to be divided up into teams and starting on your projects.
 - Code Review of the weekly project *[75 minutes]*
 - [Layout Demo 1](#layout1) *[60 minutes]*
