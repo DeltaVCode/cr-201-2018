@@ -1,0 +1,12 @@
+body {
+  background-color: #B3CDD1;
+  background-image: url("../img/background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.no-spacing {
+  margin: 0;
+  padding: 0;
+}
