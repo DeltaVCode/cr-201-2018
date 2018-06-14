@@ -2,36 +2,6 @@
   <head>
   </head>
   <body>
-    <ul>
-      <!-- Option 1: don't use this, but there are HTML event attributes -->
-      <li><button onclick="button1Clicked()">Button 1</button></li>
-
-      <!-- Option 2: don't use this, but there are DOM event properties -->
-      <li>
-        <button id="button2">Button 2</button>
-        <script>
-          var b2 = document.getElementById('button2');
-          b2.onclick = function(event) {
-            console.log('Button 2', event);
-          };
-        </script>
-      </li>
-
-      <!-- Option 3: use this instead! -->
-      <li>
-        <button id="button3">Button 3</button>
-        <script>
-          var b3 = document.getElementById('button3');
-          b3.addEventListener('click', function (event) {
-            console.log('Button 3', event);
-          });
-          b3.addEventListener('click', function (event) {
-            console.log('Button 3, also', event);
-          });
-        </script>
-      </li>
-    </ul>
-
     <form>
       <fieldset>
         <label>Name: <input type="text" name="name" autofocus required /></label>
@@ -89,7 +59,6 @@
     </form>
     <ul id="customers">
     </ul>
-    <script src="js/events.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
