@@ -31,10 +31,19 @@ Customer.prototype.toString = function () {
 Customer.prototype.render = function() {
   var customersUL = document.getElementById('customers');
 
+  /*
   var li = document.createElement('li');
   li.textContent = this.toString();
   customersUL.appendChild(li);
+  */
+  appendNewElement('li', this.toString(), customersUL);
 };
+
+function appendNewElement(tagName, textContent, parent) {
+  var el = document.createElement(tagName);
+  el.textContent = textContent;
+  parent.appendChild(el);
+}
 
 var keith = new Customer('Keith', '415 12th Ave SE', 'Cedar Rapids', 'IA', 5);
 keith.render();
