@@ -8,7 +8,13 @@ function getNextImage() {
   return image;
 }
 
+var voteCount = 0;
 function displayImages() {
+  if (voteCount >= 25) {
+    console.log('display results now!');
+    return;
+  }
+
   // Display image1
   var image1 = getNextImage();
   var img1 = document.getElementById('product-1');
@@ -24,7 +30,9 @@ function displayImages() {
 var productImages = document.querySelectorAll('#voting img');
 for(var i = 0; i < productImages.length; i++) {
   productImages[i].addEventListener('click', function (event) {
-    console.log('click', event.target.currentPlaceholder); 
+    voteCount++;
+
+    console.log('click #' + voteCount, event.target.currentPlaceholder); 
 
     displayImages();
   });
