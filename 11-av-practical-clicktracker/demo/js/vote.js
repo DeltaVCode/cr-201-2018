@@ -3,13 +3,8 @@
 var nextImage = 0;
 
 function getNextImage() {
-  var image = Placeholder.all[nextImage++];
-  console.log(image);
-
-  if (nextImage >= Placeholder.all.length) {
-    console.log('reseting to beginning of picture list');
-    nextImage = 0;
-  }
+  var image = Placeholder.all[nextImage++ % Placeholder.all.length];
+  console.log({nextImage,image});
 
   return image;
 }
@@ -52,7 +47,6 @@ function Placeholder(name, src) {
 }
 Placeholder.all = [];
 
-new Placeholder('placeholder.com', 'http://via.placeholder.com/150x150');
 new Placeholder('placekitten.com', 'https://placekitten.com/g/150/150');
 new Placeholder('fillmurray.com', 'http://fillmurray.com/150/150');
 new Placeholder('placecage.com', 'http://placecage.com/150/150');
