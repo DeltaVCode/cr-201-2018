@@ -5,6 +5,12 @@ var nextImage = 0;
 function getNextImage() {
   var image = Placeholder.all[nextImage++];
   console.log(image);
+
+  if (nextImage >= Placeholder.all.length) {
+    console.log('reseting to beginning of picture list');
+    nextImage = 0;
+  }
+
   return image;
 }
 
