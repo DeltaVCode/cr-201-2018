@@ -52,6 +52,12 @@ new Placeholder('placekitten.com', 'https://placekitten.com/g/150/150', 7, 2);
 new Placeholder('fillmurray.com', 'http://fillmurray.com/150/150', 10, 10);
 new Placeholder('placecage.com', 'http://placecage.com/150/150', 6, 3);
 
+// Add temporary random vote/show counts
+for (var i = 0; i < Placeholder.all.length; i++) {
+  Placeholder.all[i].voteCount = Math.floor(Math.random() * 50);
+  Placeholder.all[i].showCount = Math.floor(Math.random() * 100);
+}
+
 console.log('all Placeholders', Placeholder.all);
 
 window.addEventListener('load', displayImages);
