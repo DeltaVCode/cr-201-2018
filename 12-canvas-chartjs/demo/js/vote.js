@@ -55,8 +55,8 @@ new Placeholder('placecage.com', 'http://placecage.com/150/150', 6, 3);
 
 // Add temporary random vote/show counts
 for (var i = 0; i < Placeholder.all.length; i++) {
-  Placeholder.all[i].voteCount = Math.floor(Math.random() * 50);
-  Placeholder.all[i].showCount = Math.floor(Math.random() * 100);
+  Placeholder.all[i].voteCount = Math.floor(5 + Math.random() * 500);
+  Placeholder.all[i].showCount = Math.floor(20 + Math.random() * 1000);
 }
 
 console.log('all Placeholders', Placeholder.all);
@@ -85,12 +85,48 @@ function showResultChart() {
   // Un-hide our Canvas
   canvas.style.display = 'block';
 
+  var labels = [];
+  var voteCounts = [];
+  var showCounts = [];
+  var votePercentage = [];
+  for (var i = 0; i < Placeholder.all.length; i++) {
+    labels[i] = Placeholder.all[i].name;
+    voteCounts[i] = Placeholder.all[i].voteCount;
+    showCounts[i] = Placeholder.all[i].showCount;
+    votePercentage[i] = 100 * voteCounts[i] / showCounts[i];
+  }
+
   var ctx = canvas.getContext('2d');
   var chart = new Chart(ctx, {
     type: 'bar',
-    data: [],
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: 'Vote Count',
+          backgroundColor: 'rgb(200,0,0,0.6)',
+          data: voteCounts
+        },
+        {
+          label: 'Show Count',
+          backgroundColor: 'rgb(0,0,200,0.4)',
+          data: showCounts
+        },
+        {
+          label: 'Vote %',
+          data: votePercentage
+        }
+      ]
+    },
     options: {
       responsive: true,
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      },
       title: {
         display: true,
         text: 'Voting Results'
