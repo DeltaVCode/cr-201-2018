@@ -1,10 +1,8 @@
 'use strict';
 
-var nextImage = 0;
-
 function getNextImage() {
-  var image = Placeholder.all[nextImage++ % Placeholder.all.length];
-  console.log({nextImage,image});
+  var nextIndex = Math.floor(Math.random() * Placeholder.all.length);
+  var image = Placeholder.all[nextIndex];
 
   return image;
 }
