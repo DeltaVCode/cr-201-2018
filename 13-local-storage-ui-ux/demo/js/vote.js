@@ -2,10 +2,9 @@
 'use strict';
 
 window.addEventListener('load', function onLoad() {
-  var fromStorage = getFromStorage();
-  console.log(fromStorage);
+  loadFromStorage();
 
-  if (!fromStorage || !fromStorage.length) {
+  if (Placeholder.all.length === 0) {
     initializeProducts();
   }
   displayImages();
@@ -13,13 +12,32 @@ window.addEventListener('load', function onLoad() {
 
 // LOCAL STORAGE!!!
 
+// var json = '{ "name": "Keith", "age": 42, kids: ["Tabitha","Felicity"] }';
+
 function saveAll() {
-  localStorage['placeholders'] = Placeholder.all;
+  localStorage['voteHistory'] = JSON.stringify({ voteCount });
+  localStorage['placeholders'] = JSON.stringify(Placeholder.all);
   console.log(localStorage);
 }
 
-function getFromStorage() {
-  return localStorage['placeholders'];
+function loadFromStorage() {
+  var jsonVoteHistoryString = localStorage['voteHistory'];
+  if (jsonVoteHistoryString) {
+    var voteHistory = JSON.parse(jsonVoteHistoryString);
+    voteCount = voteHistory.voteCount;
+    console.log('setting voteCount to ' + voteCount);
+  }
+
+  var jsonStringFromStorage = localStorage['placeholders'];
+  if (!jsonStringFromStorage)
+    return;
+
+  var arrayFromStorage = JSON.parse(jsonStringFromStorage);
+  for(var i = 0; i < arrayFromStorage.length; i++) {
+    var arrayItem = arrayFromStorage[i];
+    new Placeholder(arrayItem.name, arrayItem.src, arrayItem.showCount, arrayItem.voteCount);
+  }
+  console.log('fromStorage', Placeholder.all);
 }
 
 
@@ -68,8 +86,10 @@ for(var i = 0; i < productImages.length; i++) {
     voteCount++;
 
     console.log('click #' + voteCount, event.target.currentPlaceholder);
-    // TODO: track that currentPlaceholder received a vote
+    // Track that currentPlaceholder received a vote
     event.target.currentPlaceholder.voteCount ++;
+
+    saveAll();
 
     // After vote, replace images for new vote
     displayImages();
@@ -91,17 +111,11 @@ function Placeholder(name, src, testShowCount, testVoteCount) {
 Placeholder.all = [];
 
 function initializeProducts() {
-  new Placeholder('placekitten.com', 'https://placekitten.com/g/150/150', 7, 2);
-  new Placeholder('fillmurray.com', 'http://fillmurray.com/150/150', 10, 10);
-  new Placeholder('placecage.com', 'http://placecage.com/150/150', 6, 3);
+  new Placeholder('placekitten.com', 'https://placekitten.com/g/150/150');
+  new Placeholder('fillmurray.com', 'http://fillmurray.com/150/150');
+  new Placeholder('placecage.com', 'http://placecage.com/150/150');
 
-  // TEMP: Add random vote/show counts so chart is interesting
-  for (var i = 0; i < Placeholder.all.length; i++) {
-    Placeholder.all[i].voteCount = Math.floor(5 + Math.random() * 500);
-    Placeholder.all[i].showCount = Math.floor(20 + Math.random() * 1000);
-  }
-
-  console.log('all Placeholders', Placeholder.all);
+  console.log('initialize Placeholders', Placeholder.all);
   saveAll();
 }
 
