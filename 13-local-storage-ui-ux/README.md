@@ -5,6 +5,7 @@
 
 ## Today's Schedule
 - Announcements
+  - 1:1s
 - Code Review *[30 minutes]*
 - [Go over the assigned readings](#readings) *[60 minutes]*
 - Code demo *[90 minutes]*
