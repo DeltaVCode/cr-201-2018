@@ -1,6 +1,11 @@
 /* globals Chart */
 'use strict';
 
+window.addEventListener('load', function onLoad() {
+  initializeProducts();
+  displayImages();
+});
+
 // get the next image for display
 // TODO: randomize image order, without repeats
 function getNextImage() {
@@ -67,7 +72,7 @@ function Placeholder(name, src, testShowCount, testVoteCount) {
 }
 Placeholder.all = [];
 
-// TODO: setup should probably live in a function
+function initializeProducts() {
 new Placeholder('placekitten.com', 'https://placekitten.com/g/150/150', 7, 2);
 new Placeholder('fillmurray.com', 'http://fillmurray.com/150/150', 10, 10);
 new Placeholder('placecage.com', 'http://placecage.com/150/150', 6, 3);
@@ -79,9 +84,7 @@ for (var i = 0; i < Placeholder.all.length; i++) {
 }
 
 console.log('all Placeholders', Placeholder.all);
-
-// Display first round of images when page has loaded
-window.addEventListener('load', displayImages);
+}
 
 // Show current results
 function showResults() {
