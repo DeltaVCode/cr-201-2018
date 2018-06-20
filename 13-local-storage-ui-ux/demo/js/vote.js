@@ -2,9 +2,27 @@
 'use strict';
 
 window.addEventListener('load', function onLoad() {
-  initializeProducts();
+  var fromStorage = getFromStorage();
+  console.log(fromStorage);
+
+  if (!fromStorage || !fromStorage.length) {
+    initializeProducts();
+  }
   displayImages();
 });
+
+// LOCAL STORAGE!!!
+
+function saveAll() {
+  localStorage['placeholders'] = Placeholder.all;
+  console.log(localStorage);
+}
+
+function getFromStorage() {
+  return localStorage['placeholders'];
+}
+
+
 
 // get the next image for display
 // TODO: randomize image order, without repeats
@@ -73,17 +91,18 @@ function Placeholder(name, src, testShowCount, testVoteCount) {
 Placeholder.all = [];
 
 function initializeProducts() {
-new Placeholder('placekitten.com', 'https://placekitten.com/g/150/150', 7, 2);
-new Placeholder('fillmurray.com', 'http://fillmurray.com/150/150', 10, 10);
-new Placeholder('placecage.com', 'http://placecage.com/150/150', 6, 3);
+  new Placeholder('placekitten.com', 'https://placekitten.com/g/150/150', 7, 2);
+  new Placeholder('fillmurray.com', 'http://fillmurray.com/150/150', 10, 10);
+  new Placeholder('placecage.com', 'http://placecage.com/150/150', 6, 3);
 
-// TEMP: Add random vote/show counts so chart is interesting
-for (var i = 0; i < Placeholder.all.length; i++) {
-  Placeholder.all[i].voteCount = Math.floor(5 + Math.random() * 500);
-  Placeholder.all[i].showCount = Math.floor(20 + Math.random() * 1000);
-}
+  // TEMP: Add random vote/show counts so chart is interesting
+  for (var i = 0; i < Placeholder.all.length; i++) {
+    Placeholder.all[i].voteCount = Math.floor(5 + Math.random() * 500);
+    Placeholder.all[i].showCount = Math.floor(20 + Math.random() * 1000);
+  }
 
-console.log('all Placeholders', Placeholder.all);
+  console.log('all Placeholders', Placeholder.all);
+  saveAll();
 }
 
 // Show current results
