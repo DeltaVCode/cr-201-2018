@@ -5,7 +5,7 @@ window.addEventListener('load', function onLoad() {
   loadFromStorage();
 
   if (Placeholder.all.length === 0) {
-    initializeProducts();
+    initialize();
   }
   displayImages();
 });
@@ -15,7 +15,7 @@ window.addEventListener('load', function onLoad() {
 // var json = '{ "name": "Keith", "age": 42, kids: ["Tabitha","Felicity"] }';
 
 function saveAll() {
-  localStorage['voteHistory'] = JSON.stringify({ voteCount });
+  localStorage['voteHistory'] = JSON.stringify({ voteCount: Placeholder.voteCount });
   localStorage['placeholders'] = JSON.stringify(Placeholder.all);
   console.log(localStorage);
 }
@@ -24,14 +24,15 @@ function loadFromStorage() {
   var jsonVoteHistoryString = localStorage['voteHistory'];
   if (jsonVoteHistoryString) {
     var voteHistory = JSON.parse(jsonVoteHistoryString);
-    voteCount = voteHistory.voteCount;
-    console.log('setting voteCount to ' + voteCount);
+    Placeholder.voteCount = voteHistory.voteCount;
+    console.log('setting voteCount to ' + Placeholder.voteCount);
   }
 
   var jsonStringFromStorage = localStorage['placeholders'];
   if (!jsonStringFromStorage)
     return;
 
+  Placeholder.all = [];
   var arrayFromStorage = JSON.parse(jsonStringFromStorage);
   for(var i = 0; i < arrayFromStorage.length; i++) {
     var arrayItem = arrayFromStorage[i];
@@ -51,19 +52,21 @@ function getNextImage() {
   return image;
 }
 
-var voteCount = 0;
 // display the next images
 function displayImages() {
-  if (voteCount >= 5) {
+  if (Placeholder.voteCount >= 5) {
     console.log('display results now!');
     showResults();
     return;
   }
 
+  document.getElementById('resultsWrapper').style.display = 'none';
+
   // TODO: Can this use an array of the images?
 
   // Display image1
   var image1 = getNextImage();
+  image1.showCount++;
   var img1 = document.getElementById('product-1');
   img1.src = image1.src;
 
@@ -73,6 +76,7 @@ function displayImages() {
 
   // Display image2
   var image2 = getNextImage();
+  image2.showCount++;
   var img2 = document.getElementById('product-2');
   img2.src = image2.src;
   img2.currentPlaceholder = image2;
@@ -83,9 +87,9 @@ var productImages = document.querySelectorAll('#voting img');
 for(var i = 0; i < productImages.length; i++) {
   productImages[i].addEventListener('click', function (event) {
     // Track click on overall vote count
-    voteCount++;
+    Placeholder.voteCount++;
 
-    console.log('click #' + voteCount, event.target.currentPlaceholder);
+    console.log('click #' + Placeholder.voteCount, event.target.currentPlaceholder);
     // Track that currentPlaceholder received a vote
     event.target.currentPlaceholder.voteCount ++;
 
@@ -108,9 +112,11 @@ function Placeholder(name, src, testShowCount, testVoteCount) {
   // Add this instance to our catalog of all Placeholders
   Placeholder.all.push(this);
 }
-Placeholder.all = [];
 
-function initializeProducts() {
+function initialize() {
+  Placeholder.voteCount = 0;
+  Placeholder.all = [];
+
   new Placeholder('placekitten.com', 'https://placekitten.com/g/150/150');
   new Placeholder('fillmurray.com', 'http://fillmurray.com/150/150');
   new Placeholder('placecage.com', 'http://placecage.com/150/150');
@@ -121,6 +127,8 @@ function initializeProducts() {
 
 // Show current results
 function showResults() {
+  document.getElementById('resultsWrapper').style.display = 'block';
+
   var ul = document.getElementById('results');
   // reset list
   ul.innerHTML = '';
@@ -226,3 +234,10 @@ function showResultChart() {
     }
   });
 }
+
+var resetButton = document.querySelector('button[type="reset"]');
+resetButton.addEventListener('click', function resetClick(event) {
+  console.log('reset click', event);
+  initialize();
+  displayImages();
+});
