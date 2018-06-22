@@ -5,11 +5,21 @@
 
 ## Today's Schedule
 - Announcements
-  - Reminder: weekly surveys will go out today
+  - Reminder: penultimate weekly survey today
+  - Final Exam due Monday
+    - Open book, but solo
 - Discuss upcoming Career Coaching assignments
-- Code Review *[60 minutes]*
+  - 60-second pitch
+  - Meetup opportunities
+    - Priority is networking more so than learning
+    - [SQL Saturday Iowa City](http://sqlsaturday.com/752): **tomorrow** June 23
+    - [1 Million Cups](https://www.1millioncups.com/icr): Wed, June 27
+    - [Open Coffee](https://www.meetup.com/NewBoCoffee/events/bndkdpyxjbmc/): Fri, June 29
 - [301 Preview](#301) *[30 minutes]*
-- [Final Project Overview](#project) *[60 minutes]*
+- Code Review *[30 minutes]*
+- [Final Project Overview](#project) *[30 minutes]*
+  - This afternoon: 30 minutes with project team after lunch
+- Merge Conflict Lab *[60 minutes]*
 
 **Learning Objectives**
 
